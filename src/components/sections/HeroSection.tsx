@@ -24,16 +24,85 @@ export default function HeroSection() {
       {/* Dot grid */}
       <div className="dot-grid" style={{ position: 'absolute', inset: 0, opacity: 0.4 }} />
 
-      {/* Radial glow */}
+      {/* Radial glow 1 - top left */}
       <div style={{
         position: 'absolute',
-        top: '20%',
-        left: '-10%',
-        width: '600px',
-        height: '600px',
-        background: 'radial-gradient(circle, rgba(0,229,255,0.04) 0%, transparent 70%)',
+        top: '10%',
+        left: '-15%',
+        width: '700px',
+        height: '700px',
+        background: 'radial-gradient(circle, rgba(255,107,0,0.07) 0%, transparent 65%)',
         pointerEvents: 'none',
+        animation: 'glow-breathe 6s ease-in-out infinite',
       }} />
+
+      {/* Radial glow 2 - bottom right */}
+      <div style={{
+        position: 'absolute',
+        bottom: '-10%',
+        right: '-10%',
+        width: '500px',
+        height: '500px',
+        background: 'radial-gradient(circle, rgba(255,107,0,0.05) 0%, transparent 65%)',
+        pointerEvents: 'none',
+        animation: 'glow-breathe 8s ease-in-out infinite 2s',
+      }} />
+
+      {/* Radial glow 3 - center subtle */}
+      <div style={{
+        position: 'absolute',
+        top: '40%',
+        left: '40%',
+        width: '400px',
+        height: '400px',
+        background: 'radial-gradient(circle, rgba(255,107,0,0.03) 0%, transparent 70%)',
+        pointerEvents: 'none',
+        animation: 'glow-breathe 10s ease-in-out infinite 1s',
+      }} />
+
+      {/* Animated grid lines */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        backgroundImage: 'linear-gradient(rgba(255,107,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,0,0.04) 1px, transparent 1px)',
+        backgroundSize: '60px 60px',
+        pointerEvents: 'none',
+        animation: 'grid-pulse 4s ease-in-out infinite',
+      }} />
+
+      {/* Floating particles */}
+      {[
+        { top: '15%', left: '8%',  size: 3, dur: '12s', tx: '40px',  ty: '-60px',  delay: '0s' },
+        { top: '30%', left: '15%', size: 2, dur: '15s', tx: '-30px', ty: '-80px',  delay: '1s' },
+        { top: '60%', left: '5%',  size: 2, dur: '18s', tx: '50px',  ty: '-50px',  delay: '2s' },
+        { top: '75%', left: '20%', size: 3, dur: '14s', tx: '-20px', ty: '-70px',  delay: '0.5s' },
+        { top: '20%', left: '85%', size: 2, dur: '16s', tx: '-40px', ty: '-60px',  delay: '3s' },
+        { top: '50%', left: '90%', size: 3, dur: '13s', tx: '-50px', ty: '-40px',  delay: '1.5s' },
+        { top: '80%', left: '78%', size: 2, dur: '17s', tx: '30px',  ty: '-80px',  delay: '2.5s' },
+        { top: '10%', left: '50%', size: 2, dur: '20s', tx: '20px',  ty: '-50px',  delay: '4s' },
+        { top: '40%', left: '60%', size: 3, dur: '11s', tx: '-30px', ty: '-60px',  delay: '0.8s' },
+        { top: '65%', left: '45%', size: 2, dur: '19s', tx: '40px',  ty: '-70px',  delay: '3.5s' },
+        { top: '85%', left: '35%', size: 2, dur: '14s', tx: '-20px', ty: '-55px',  delay: '1.2s' },
+        { top: '25%', left: '72%', size: 3, dur: '16s', tx: '30px',  ty: '-45px',  delay: '2.8s' },
+        { top: '55%', left: '28%', size: 2, dur: '13s', tx: '-40px', ty: '-65px',  delay: '0.3s' },
+        { top: '90%', left: '60%', size: 2, dur: '18s', tx: '20px',  ty: '-50px',  delay: '4.5s' },
+        { top: '35%', left: '3%',  size: 3, dur: '15s', tx: '60px',  ty: '-40px',  delay: '1.8s' },
+      ].map((p, i) => (
+        <div key={i} style={{
+          position: 'absolute',
+          top: p.top,
+          left: p.left,
+          width: `${p.size}px`,
+          height: `${p.size}px`,
+          borderRadius: '50%',
+          backgroundColor: '#FF6B00',
+          pointerEvents: 'none',
+          // @ts-ignore
+          '--tx': p.tx,
+          '--ty': p.ty,
+          animation: `float-particle ${p.dur} ease-in-out infinite ${p.delay}`,
+        } as React.CSSProperties} />
+      ))}
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px', width: '100%', position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '80px', alignItems: 'center' }} className="hero-grid">
@@ -52,8 +121,8 @@ export default function HeroSection() {
                 height: '80px',
                 borderRadius: '50%',
                 overflow: 'hidden',
-                border: '2px solid rgba(0,229,255,0.4)',
-                boxShadow: '0 0 20px rgba(0,229,255,0.12)',
+                border: '2px solid rgba(255,107,0,0.4)',
+                boxShadow: '0 0 20px rgba(255,107,0,0.15)',
               }}>
                 <Image
                   src="/profile.jpg"
@@ -106,7 +175,7 @@ export default function HeroSection() {
                 fontFamily: 'var(--font-display)',
                 fontSize: 'clamp(20px, 2.5vw, 26px)',
                 fontWeight: 500,
-                color: 'var(--accent-cyan)',
+                color: 'var(--accent-orange)',
                 marginBottom: '24px',
                 letterSpacing: '-0.5px',
               }}
@@ -142,7 +211,7 @@ export default function HeroSection() {
                 href="/projects"
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
-                  background: 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
+                  background: 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
                   color: '#080B12',
                   padding: '14px 28px',
                   borderRadius: 'var(--radius-md)',
@@ -163,8 +232,8 @@ export default function HeroSection() {
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: '8px',
                   backgroundColor: 'transparent',
-                  border: '1px solid rgba(0,229,255,0.35)',
-                  color: 'var(--accent-cyan)',
+                  border: '1px solid rgba(255,107,0,0.35)',
+                  color: 'var(--accent-orange)',
                   padding: '14px 28px',
                   borderRadius: 'var(--radius-md)',
                   fontFamily: 'var(--font-body)',
@@ -173,7 +242,7 @@ export default function HeroSection() {
                   textDecoration: 'none',
                   transition: 'background 200ms, border-color 200ms',
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(0,229,255,0.08)' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(255,107,0,0.08)' }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent' }}
               >
                 <DownloadSimple size={16} weight="bold" /> Download CV
@@ -191,7 +260,7 @@ export default function HeroSection() {
                 <span key={pill} style={{
                   fontFamily: 'var(--font-mono)',
                   fontSize: '11px',
-                  color: i === 0 ? 'var(--accent-cyan)' : 'var(--text-muted)',
+                  color: i === 0 ? 'var(--accent-orange)' : 'var(--text-muted)',
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
                 }}>

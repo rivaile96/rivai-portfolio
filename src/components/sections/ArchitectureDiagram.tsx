@@ -16,7 +16,7 @@ export default function ArchitectureDiagram() {
       <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
         <FadeIn>
           <div style={{ marginBottom: '64px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
               System Thinking
             </p>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 3.5vw, 42px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-1px', lineHeight: 1.1, maxWidth: '500px' }}>
@@ -42,7 +42,7 @@ export default function ArchitectureDiagram() {
               {/* Column 1: Hardware */}
               <DiagramColumn
                 label="Hardware Layer"
-                color="var(--accent-cyan)"
+                color="var(--accent-orange)"
                 nodes={['RFID Reader (Impinj)', 'BLE Beacon', 'NFC Tag']}
               />
 
@@ -62,7 +62,7 @@ export default function ArchitectureDiagram() {
               {/* Column 3: Application */}
               <DiagramColumn
                 label="Application Layer"
-                color="var(--accent-cyan)"
+                color="var(--accent-orange)"
                 nodes={['WMS / ERP (Laravel)', 'Reporting Dashboard', 'MySQL Database']}
               />
             </div>
@@ -70,7 +70,7 @@ export default function ArchitectureDiagram() {
             {/* Legend */}
             <div style={{ marginTop: '40px', paddingTop: '24px', borderTop: '1px solid var(--bg-border)', display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
               {[
-                { color: 'var(--accent-cyan)', label: 'Hardware & Application' },
+                { color: 'var(--accent-orange)', label: 'Hardware & Application' },
                 { color: 'var(--signal-green)', label: 'Integration / Middleware' },
               ].map(({ color, label }) => (
                 <div key={label} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -118,12 +118,12 @@ function DiagramArrow() {
       padding: '0 16px', marginTop: '32px', flexShrink: 0,
     }}>
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px' }}>
-        <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(0,229,255,0.3)' }} />
+        <div style={{ width: '40px', height: '1px', backgroundColor: 'rgba(255,107,0,0.3)' }} />
         <div style={{
           width: 0, height: 0,
           borderTop: '4px solid transparent',
           borderBottom: '4px solid transparent',
-          borderLeft: '6px solid rgba(0,229,255,0.4)',
+          borderLeft: '6px solid rgba(255,107,0,0.4)',
           marginLeft: '4px',
         }} />
       </div>

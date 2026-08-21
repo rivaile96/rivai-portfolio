@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const statusLabel: Record<string, { label: string; color: string }> = {
   live:          { label: 'Live',        color: 'var(--signal-green)' },
-  deployed:      { label: 'Deployed',    color: 'var(--accent-cyan)' },
+  deployed:      { label: 'Deployed',    color: 'var(--accent-orange)' },
   proposal:      { label: 'Approved',    color: 'var(--signal-amber)' },
   'in-progress': { label: 'In Progress', color: 'var(--signal-amber)' },
 }
@@ -32,9 +32,9 @@ const cardBase: React.CSSProperties = {
 }
 
 const cardHover: React.CSSProperties = {
-  borderColor: 'rgba(0,229,255,0.25)',
+  borderColor: 'rgba(255,107,0,0.25)',
   transform: 'translateY(-2px)',
-  boxShadow: 'var(--glow-cyan)',
+  boxShadow: 'var(--glow-orange)',
 }
 
 export default function ProjectsPage() {
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
         {/* Header */}
         <FadeIn>
           <div style={{ marginBottom: '80px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
               Portfolio
             </p>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 64px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-2px', lineHeight: 1.05, marginBottom: '20px' }}>
@@ -93,8 +93,8 @@ export default function ProjectsPage() {
                       {project.tags.map(tag => (
                         <span key={tag} style={{
                           fontFamily: 'var(--font-mono)', fontSize: '11px',
-                          color: 'var(--accent-cyan)', backgroundColor: 'rgba(0,229,255,0.08)',
-                          border: '1px solid rgba(0,229,255,0.2)',
+                          color: 'var(--accent-orange)', backgroundColor: 'rgba(255,107,0,0.08)',
+                          border: '1px solid rgba(255,107,0,0.2)',
                           padding: '3px 8px', borderRadius: 'var(--radius-sm)',
                         }}>{tag}</span>
                       ))}

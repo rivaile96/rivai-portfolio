@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const statusLabel: Record<string, { label: string; color: string }> = {
   live:          { label: 'Live',        color: 'var(--signal-green)' },
-  deployed:      { label: 'Deployed',    color: 'var(--accent-cyan)' },
+  deployed:      { label: 'Deployed',    color: 'var(--accent-orange)' },
   proposal:      { label: 'Approved',    color: 'var(--signal-amber)' },
   'in-progress': { label: 'In Progress', color: 'var(--signal-amber)' },
 }
@@ -45,7 +45,7 @@ const nextCardBase: React.CSSProperties = {
 }
 
 const nextCardHover: React.CSSProperties = {
-  borderColor: 'rgba(0,229,255,0.25)',
+  borderColor: 'rgba(255,107,0,0.25)',
 }
 
 export default async function ProjectDetailPage({ params }: Props) {
@@ -102,8 +102,8 @@ export default async function ProjectDetailPage({ params }: Props) {
               {project.tags.map(tag => (
                 <span key={tag} style={{
                   fontFamily: 'var(--font-mono)', fontSize: '12px',
-                  color: 'var(--accent-cyan)', backgroundColor: 'rgba(0,229,255,0.08)',
-                  border: '1px solid rgba(0,229,255,0.2)',
+                  color: 'var(--accent-orange)', backgroundColor: 'rgba(255,107,0,0.08)',
+                  border: '1px solid rgba(255,107,0,0.2)',
                   padding: '4px 10px', borderRadius: 'var(--radius-sm)',
                 }}>{tag}</span>
               ))}
@@ -114,14 +114,14 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* Impact callout */}
         <FadeIn delay={0.1}>
           <div style={{
-            backgroundColor: 'rgba(0,229,255,0.06)',
-            border: '1px solid rgba(0,229,255,0.2)',
-            borderLeft: '3px solid var(--accent-cyan)',
+            backgroundColor: 'rgba(255,107,0,0.06)',
+            border: '1px solid rgba(255,107,0,0.2)',
+            borderLeft: '3px solid var(--accent-orange)',
             borderRadius: 'var(--radius-lg)',
             padding: '28px 32px',
             marginBottom: '64px',
           }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
               Impact
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '18px', color: 'var(--text-primary)', lineHeight: 1.65 }}>

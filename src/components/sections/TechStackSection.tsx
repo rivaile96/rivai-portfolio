@@ -3,7 +3,7 @@ import { FadeIn, StaggerChildren, StaggerItem } from '@/components/animations'
 
 const tierDot: Record<string, string> = {
   production: 'var(--signal-green)',
-  proficient: 'var(--accent-cyan)',
+  proficient: 'var(--accent-orange)',
   familiar: 'var(--text-muted)',
 }
 
@@ -13,7 +13,7 @@ export default function TechStackSection() {
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <FadeIn>
           <div style={{ marginBottom: '64px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
               Technical Stack
             </p>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-1px', lineHeight: 1.1 }}>

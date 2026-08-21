@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const tierConfig = {
   production: { label: 'Daily Driver', color: 'var(--signal-green)', dot: 'var(--signal-green)' },
-  proficient:  { label: 'Proficient',   color: 'var(--accent-cyan)',  dot: 'var(--accent-cyan)' },
+  proficient:  { label: 'Proficient',   color: 'var(--accent-orange)',  dot: 'var(--accent-orange)' },
   familiar:    { label: 'Familiar',     color: 'var(--text-muted)',   dot: 'var(--text-muted)' },
 }
 
@@ -22,7 +22,7 @@ export default function StackPage() {
         {/* Header */}
         <FadeIn>
           <div style={{ marginBottom: '80px', maxWidth: '640px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
               Technical Stack
             </p>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 64px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-2px', lineHeight: 1.05, marginBottom: '20px' }}>

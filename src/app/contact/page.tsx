@@ -36,7 +36,7 @@ export default function ContactPage() {
         {/* Header */}
         <FadeIn>
           <div style={{ marginBottom: '80px', maxWidth: '560px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
               Contact
             </p>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 64px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-2px', lineHeight: 1.05, marginBottom: '20px' }}>
@@ -112,7 +112,7 @@ export default function ContactPage() {
                       transition: 'border-color 200ms',
                       boxSizing: 'border-box',
                     }}
-                    onFocus={e => e.target.style.borderColor = 'rgba(0,229,255,0.4)'}
+                    onFocus={e => e.target.style.borderColor = 'rgba(255,107,0,0.4)'}
                     onBlur={e => e.target.style.borderColor = 'var(--bg-border)'}
                   />
                 </div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   type="submit"
                   disabled={status === 'sending' || status === 'sent'}
                   style={{
-                    background: status === 'sent' ? 'var(--signal-green)' : 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
+                    background: status === 'sent' ? 'var(--signal-green)' : 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
                     color: '#080B12',
                     border: 'none',
                     borderRadius: 'var(--radius-md)',
@@ -191,10 +191,10 @@ export default function ContactPage() {
                   textDecoration: 'none',
                   transition: 'border-color 200ms',
                 }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(0,229,255,0.25)'}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,107,0,0.25)'}
                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = 'var(--bg-border)'}
                 >
-                  <span style={{ color: 'var(--accent-cyan)' }}>{item.icon}</span>
+                  <span style={{ color: 'var(--accent-orange)' }}>{item.icon}</span>
                   <div>
                     <p style={{ fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '2px' }}>{item.label}</p>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'var(--text-secondary)' }}>{item.value}</p>
@@ -245,7 +245,7 @@ function FormField({ label, name, type, placeholder, value, onChange, required }
           transition: 'border-color 200ms',
           boxSizing: 'border-box',
         }}
-        onFocus={e => e.target.style.borderColor = 'rgba(0,229,255,0.4)'}
+        onFocus={e => e.target.style.borderColor = 'rgba(255,107,0,0.4)'}
         onBlur={e => e.target.style.borderColor = 'var(--bg-border)'}
       />
     </div>

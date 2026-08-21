@@ -15,14 +15,14 @@ interface Edge {
 }
 
 const NODES: Node[] = [
-  { x: 0.15, y: 0.2,  label: 'RFID Reader',   color: '#00E5FF' },
-  { x: 0.15, y: 0.5,  label: 'BLE Beacon',    color: '#00E5FF' },
-  { x: 0.15, y: 0.8,  label: 'NFC Tag',       color: '#00B8CC' },
-  { x: 0.45, y: 0.35, label: 'Middleware',     color: '#00FF88' },
-  { x: 0.45, y: 0.65, label: 'API Gateway',   color: '#00FF88' },
-  { x: 0.75, y: 0.2,  label: 'WMS / ERP',     color: '#00E5FF' },
-  { x: 0.75, y: 0.5,  label: 'Laravel App',   color: '#00E5FF' },
-  { x: 0.75, y: 0.8,  label: 'Database',      color: '#00B8CC' },
+  { x: 0.15, y: 0.2,  label: 'RFID Reader',   color: '#FF6B00' },
+  { x: 0.15, y: 0.5,  label: 'BLE Beacon',    color: '#FF6B00' },
+  { x: 0.15, y: 0.8,  label: 'NFC Tag',       color: '#CC5500' },
+  { x: 0.45, y: 0.35, label: 'Middleware',     color: '#22C55E' },
+  { x: 0.45, y: 0.65, label: 'API Gateway',   color: '#22C55E' },
+  { x: 0.75, y: 0.2,  label: 'WMS / ERP',     color: '#FF6B00' },
+  { x: 0.75, y: 0.5,  label: 'Laravel App',   color: '#FF6B00' },
+  { x: 0.75, y: 0.8,  label: 'Database',      color: '#CC5500' },
 ]
 
 const EDGES: Edge[] = [
@@ -76,7 +76,7 @@ export default function NodeGraph() {
         ctx.beginPath()
         ctx.moveTo(x1, y1)
         ctx.lineTo(x2, y2)
-        ctx.strokeStyle = 'rgba(0,229,255,0.12)'
+        ctx.strokeStyle = 'rgba(255,107,0,0.12)'
         ctx.lineWidth = 1
         ctx.stroke()
 
@@ -86,7 +86,7 @@ export default function NodeGraph() {
         const py = y1 + (y2 - y1) * offset
         ctx.beginPath()
         ctx.arc(px, py, 2, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(0,229,255,0.6)'
+        ctx.fillStyle = 'rgba(255,107,0,0.7)'
         ctx.fill()
       })
 
@@ -97,8 +97,8 @@ export default function NodeGraph() {
 
         // Glow
         const grad = ctx.createRadialGradient(x, y, 0, x, y, 18)
-        grad.addColorStop(0, 'rgba(0,229,255,0.18)')
-        grad.addColorStop(1, 'rgba(0,229,255,0)')
+        grad.addColorStop(0, 'rgba(255,107,0,0.22)')
+        grad.addColorStop(1, 'rgba(255,107,0,0)')
         ctx.beginPath()
         ctx.arc(x, y, 18, 0, Math.PI * 2)
         ctx.fillStyle = grad

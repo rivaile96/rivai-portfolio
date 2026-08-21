@@ -15,13 +15,13 @@ export default function CTASection() {
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
             marginBottom: '24px',
-            backgroundColor: 'rgba(0,229,255,0.08)',
-            border: '1px solid rgba(0,229,255,0.2)',
+            backgroundColor: 'rgba(255,107,0,0.08)',
+            border: '1px solid rgba(255,107,0,0.2)',
             borderRadius: '100px',
             padding: '6px 16px',
           }}>
             <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--signal-green)', animation: 'pulse-dot 2s ease-in-out infinite' }} />
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
               Open to Opportunities
             </span>
           </div>
@@ -61,8 +61,8 @@ export default function CTASection() {
               href="/contact"
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
-                background: 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
-                color: '#080B12',
+                background: 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
+                color: '#ffffff',
                 padding: '16px 32px',
                 borderRadius: 'var(--radius-md)',
                 fontFamily: 'var(--font-body)',
@@ -80,8 +80,8 @@ export default function CTASection() {
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: '8px',
                 backgroundColor: 'transparent',
-                border: '1px solid rgba(0,229,255,0.3)',
-                color: 'var(--accent-cyan)',
+                border: '1px solid rgba(255,107,0,0.3)',
+                color: 'var(--accent-orange)',
                 padding: '16px 32px',
                 borderRadius: 'var(--radius-md)',
                 fontFamily: 'var(--font-body)',

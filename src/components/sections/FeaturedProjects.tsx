@@ -6,7 +6,7 @@ import { HoverCard } from '@/components/ui/HoverCard'
 
 const statusLabel: Record<string, { label: string; color: string }> = {
   live:          { label: 'Live',        color: 'var(--signal-green)' },
-  deployed:      { label: 'Deployed',    color: 'var(--accent-cyan)' },
+  deployed:      { label: 'Deployed',    color: 'var(--accent-orange)' },
   proposal:      { label: 'Approved',    color: 'var(--signal-amber)' },
   'in-progress': { label: 'In Progress', color: 'var(--signal-amber)' },
 }
@@ -20,14 +20,14 @@ const cardBase: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   transition: 'border-color 300ms, transform 300ms, box-shadow 300ms',
-  borderLeft: '3px solid var(--accent-cyan)',
+  borderLeft: '3px solid var(--accent-orange)',
   cursor: 'pointer',
 }
 
 const cardHover: React.CSSProperties = {
-  borderColor: 'rgba(0,229,255,0.4)',
+  borderColor: 'rgba(255,107,0,0.4)',
   transform: 'translateY(-4px)',
-  boxShadow: 'var(--glow-cyan)',
+  boxShadow: 'var(--glow-orange)',
 }
 
 const smallCardBase: React.CSSProperties = {
@@ -43,9 +43,9 @@ const smallCardBase: React.CSSProperties = {
 }
 
 const smallCardHover: React.CSSProperties = {
-  borderColor: 'rgba(0,229,255,0.25)',
+  borderColor: 'rgba(255,107,0,0.25)',
   transform: 'translateY(-4px)',
-  boxShadow: 'var(--glow-cyan)',
+  boxShadow: 'var(--glow-orange)',
 }
 
 export default function FeaturedProjects() {
@@ -59,7 +59,7 @@ export default function FeaturedProjects() {
         <FadeIn>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '64px', flexWrap: 'wrap', gap: '16px' }}>
             <div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
                 Selected Work
               </p>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-1px', lineHeight: 1.1 }}>
@@ -68,9 +68,9 @@ export default function FeaturedProjects() {
             </div>
             <Link href="/projects" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              color: 'var(--accent-cyan)', fontSize: '14px', fontWeight: 600,
+              color: 'var(--accent-orange)', fontSize: '14px', fontWeight: 600,
               fontFamily: 'var(--font-body)', textDecoration: 'none',
-              border: '1px solid rgba(0,229,255,0.3)', padding: '10px 20px',
+              border: '1px solid rgba(255,107,0,0.3)', padding: '10px 20px',
               borderRadius: 'var(--radius-md)', transition: 'background 200ms',
             }}>
               View All <ArrowRight size={14} weight="bold" />
@@ -92,8 +92,8 @@ export default function FeaturedProjects() {
                       {main.tags.map(tag => (
                         <span key={tag} style={{
                           fontFamily: 'var(--font-mono)', fontSize: '11px',
-                          color: 'var(--accent-cyan)', backgroundColor: 'rgba(0,229,255,0.08)',
-                          border: '1px solid rgba(0,229,255,0.2)',
+                          color: 'var(--accent-orange)', backgroundColor: 'rgba(255,107,0,0.08)',
+                          border: '1px solid rgba(255,107,0,0.2)',
                           padding: '3px 8px', borderRadius: 'var(--radius-sm)',
                         }}>{tag}</span>
                       ))}
@@ -125,7 +125,7 @@ export default function FeaturedProjects() {
                     ))}
                   </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-cyan)', fontSize: '14px', fontFamily: 'var(--font-body)', fontWeight: 600 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-orange)', fontSize: '14px', fontFamily: 'var(--font-body)', fontWeight: 600 }}>
                     View Case Study <ArrowRight size={14} weight="bold" />
                   </div>
                 </HoverCard>
@@ -143,8 +143,8 @@ export default function FeaturedProjects() {
                       {project.tags.slice(0, 2).map(tag => (
                         <span key={tag} style={{
                           fontFamily: 'var(--font-mono)', fontSize: '11px',
-                          color: 'var(--accent-cyan)', backgroundColor: 'rgba(0,229,255,0.08)',
-                          border: '1px solid rgba(0,229,255,0.2)',
+                          color: 'var(--accent-orange)', backgroundColor: 'rgba(255,107,0,0.08)',
+                          border: '1px solid rgba(255,107,0,0.2)',
                           padding: '3px 8px', borderRadius: 'var(--radius-sm)',
                         }}>{tag}</span>
                       ))}
@@ -166,7 +166,7 @@ export default function FeaturedProjects() {
                       {project.impact}
                     </p>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-cyan)', fontSize: '13px', fontFamily: 'var(--font-body)', fontWeight: 600 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--accent-orange)', fontSize: '13px', fontFamily: 'var(--font-body)', fontWeight: 600 }}>
                       View Case Study <ArrowRight size={12} weight="bold" />
                     </div>
                   </HoverCard>

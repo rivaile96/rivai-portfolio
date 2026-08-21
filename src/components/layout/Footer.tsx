@@ -22,11 +22,11 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
               <div style={{
                 width: '32px', height: '32px',
-                background: 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
+                background: 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
                 borderRadius: 'var(--radius-sm)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'var(--font-mono)', fontSize: '13px', fontWeight: 700,
-                color: '#080B12',
+                color: '#ffffff',
               }}>RI</div>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-primary)' }}>
                 Riva Imanudin

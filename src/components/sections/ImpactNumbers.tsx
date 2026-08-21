@@ -40,7 +40,7 @@ export default function ImpactNumbers() {
                   fontFamily: 'var(--font-mono)',
                   fontSize: 'clamp(48px, 5vw, 72px)',
                   fontWeight: 700,
-                  color: 'var(--accent-cyan)',
+                  color: 'var(--accent-orange)',
                   lineHeight: 1,
                   marginBottom: '12px',
                 }}>

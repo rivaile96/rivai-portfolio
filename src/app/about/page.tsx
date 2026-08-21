@@ -43,13 +43,13 @@ export default function AboutPage() {
         {/* Header */}
         <FadeIn>
           <div style={{ marginBottom: '80px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-cyan)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--accent-orange)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
               About
             </p>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(40px, 5vw, 64px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-2px', lineHeight: 1.05, marginBottom: '32px' }}>
               Riva Imanudin
             </h1>
-            <p style={{ fontFamily: 'var(--font-display)', fontSize: '22px', color: 'var(--accent-cyan)', fontWeight: 500, marginBottom: '28px' }}>
+            <p style={{ fontFamily: 'var(--font-display)', fontSize: '22px', color: 'var(--accent-orange)', fontWeight: 500, marginBottom: '28px' }}>
               System Integration Engineer
             </p>
             <div style={{ maxWidth: '640px' }}>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <p style={{ fontFamily: 'var(--font-display)', fontSize: '18px', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '4px' }}>{item.role}</p>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--accent-cyan)', marginBottom: '12px' }}>{item.company}</p>
+                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--accent-orange)', marginBottom: '12px' }}>{item.company}</p>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--text-secondary)', lineHeight: 1.7 }}>{item.detail}</p>
                   </div>
                 </div>

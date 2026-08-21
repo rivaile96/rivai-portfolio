@@ -26,7 +26,7 @@ export default function Navbar() {
         right: 0,
         zIndex: 50,
         borderBottom: scrolled ? '1px solid var(--bg-border)' : '1px solid transparent',
-        backgroundColor: scrolled ? 'rgba(8,11,18,0.92)' : 'transparent',
+        backgroundColor: scrolled ? 'rgba(10,10,10,0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         transition: 'all 300ms ease',
       }}
@@ -38,11 +38,11 @@ export default function Navbar() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{
                 width: '32px', height: '32px',
-                background: 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
+                background: 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
                 borderRadius: 'var(--radius-sm)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'var(--font-mono)', fontSize: '13px', fontWeight: 700,
-                color: '#080B12',
+                color: '#ffffff',
               }}>RI</div>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-primary)' }}>
                 Riva Imanudin
@@ -60,7 +60,7 @@ export default function Navbar() {
                   fontFamily: 'var(--font-body)',
                   fontSize: '14px',
                   fontWeight: 500,
-                  color: pathname === item.href ? 'var(--accent-cyan)' : 'var(--text-secondary)',
+                  color: pathname === item.href ? 'var(--accent-orange)' : 'var(--text-secondary)',
                   textDecoration: 'none',
                   transition: 'color 200ms',
                 }}
@@ -74,48 +74,47 @@ export default function Navbar() {
                 fontFamily: 'var(--font-body)',
                 fontSize: '14px',
                 fontWeight: 600,
-                color: '#080B12',
-                background: 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
-                padding: '8px 20px',
+                color: '#ffffff',
+                background: 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
+                padding: '8px 18px',
                 borderRadius: 'var(--radius-md)',
                 textDecoration: 'none',
-                transition: 'filter 200ms',
               }}
             >
               Hire Me
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            onClick={() => setOpen(!open)}
             className="mobile-menu-btn"
-            style={{
-              background: 'none', border: 'none', cursor: 'pointer',
-              color: 'var(--text-primary)', padding: '8px',
-            }}
+            onClick={() => setOpen(!open)}
+            style={{ background: 'none', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', padding: '8px' }}
           >
-            {open ? <X size={24} /> : <List size={24} />}
+            {open ? <X size={20} /> : <List size={20} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile menu */}
         {open && (
-          <div style={{
+          <div className="mobile-menu" style={{
+            flexDirection: 'column',
+            gap: '4px',
             paddingBottom: '16px',
             borderTop: '1px solid var(--bg-border)',
-            display: 'flex', flexDirection: 'column', gap: '4px',
-          }} className="mobile-menu">
+            paddingTop: '16px',
+          }}>
             {siteConfig.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
                 style={{
-                  padding: '12px 8px',
+                  padding: '10px 0',
                   fontFamily: 'var(--font-body)',
                   fontSize: '15px',
-                  color: pathname === item.href ? 'var(--accent-cyan)' : 'var(--text-secondary)',
+                  fontWeight: 500,
+                  color: pathname === item.href ? 'var(--accent-orange)' : 'var(--text-secondary)',
                   textDecoration: 'none',
                 }}
               >
@@ -130,8 +129,8 @@ export default function Navbar() {
                 padding: '12px',
                 textAlign: 'center',
                 fontWeight: 600,
-                color: '#080B12',
-                background: 'linear-gradient(135deg, var(--accent-cyan), #0066CC)',
+                color: '#ffffff',
+                background: 'linear-gradient(135deg, var(--accent-orange), #CC5500)',
                 borderRadius: 'var(--radius-md)',
                 textDecoration: 'none',
               }}

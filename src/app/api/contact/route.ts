@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
         subject: `Portfolio inquiry from ${name}${company ? ` — ${company}` : ''}`,
         html: `
           <div style="font-family: sans-serif; max-width: 600px;">
-            <h2 style="color: #00E5FF;">New Portfolio Inquiry</h2>
+            <h2 style="color: #FF6B00;">New Portfolio Inquiry</h2>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
             ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
