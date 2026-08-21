@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, DownloadSimple } from '@phosphor-icons/react'
 import dynamic from 'next/dynamic'
 
@@ -39,6 +40,32 @@ export default function HeroSection() {
 
           {/* Left: Content */}
           <div>
+            {/* Profile photo */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              style={{ marginBottom: '32px', display: 'inline-block' }}
+            >
+              <div style={{
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                border: '2px solid rgba(0,229,255,0.4)',
+                boxShadow: '0 0 20px rgba(0,229,255,0.12)',
+              }}>
+                <Image
+                  src="/profile.jpg"
+                  alt="Riva Imanudin"
+                  width={80}
+                  height={80}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  priority
+                />
+              </div>
+            </motion.div>
+
             {/* Status badge */}
             <motion.div
               initial={{ opacity: 0, y: -8 }}
