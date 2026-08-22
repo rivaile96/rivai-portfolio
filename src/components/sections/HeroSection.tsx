@@ -64,29 +64,29 @@ export default function HeroSection() {
       <div style={{
         position: 'absolute',
         inset: 0,
-        backgroundImage: 'linear-gradient(rgba(255,107,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,0,0.04) 1px, transparent 1px)',
-        backgroundSize: '60px 60px',
+        backgroundImage: 'linear-gradient(rgba(255,107,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,0,0.08) 1px, transparent 1px)',
+        backgroundSize: '48px 48px',
         pointerEvents: 'none',
         animation: 'grid-pulse 4s ease-in-out infinite',
       }} />
 
-      {/* Floating particles */}
+      {/* Floating particles - pakai keyframe float-1 s/d float-5 bergantian */}
       {[
-        { top: '15%', left: '8%',  size: 3, dur: '12s', tx: '40px',  ty: '-60px',  delay: '0s' },
-        { top: '30%', left: '15%', size: 2, dur: '15s', tx: '-30px', ty: '-80px',  delay: '1s' },
-        { top: '60%', left: '5%',  size: 2, dur: '18s', tx: '50px',  ty: '-50px',  delay: '2s' },
-        { top: '75%', left: '20%', size: 3, dur: '14s', tx: '-20px', ty: '-70px',  delay: '0.5s' },
-        { top: '20%', left: '85%', size: 2, dur: '16s', tx: '-40px', ty: '-60px',  delay: '3s' },
-        { top: '50%', left: '90%', size: 3, dur: '13s', tx: '-50px', ty: '-40px',  delay: '1.5s' },
-        { top: '80%', left: '78%', size: 2, dur: '17s', tx: '30px',  ty: '-80px',  delay: '2.5s' },
-        { top: '10%', left: '50%', size: 2, dur: '20s', tx: '20px',  ty: '-50px',  delay: '4s' },
-        { top: '40%', left: '60%', size: 3, dur: '11s', tx: '-30px', ty: '-60px',  delay: '0.8s' },
-        { top: '65%', left: '45%', size: 2, dur: '19s', tx: '40px',  ty: '-70px',  delay: '3.5s' },
-        { top: '85%', left: '35%', size: 2, dur: '14s', tx: '-20px', ty: '-55px',  delay: '1.2s' },
-        { top: '25%', left: '72%', size: 3, dur: '16s', tx: '30px',  ty: '-45px',  delay: '2.8s' },
-        { top: '55%', left: '28%', size: 2, dur: '13s', tx: '-40px', ty: '-65px',  delay: '0.3s' },
-        { top: '90%', left: '60%', size: 2, dur: '18s', tx: '20px',  ty: '-50px',  delay: '4.5s' },
-        { top: '35%', left: '3%',  size: 3, dur: '15s', tx: '60px',  ty: '-40px',  delay: '1.8s' },
+        { top: '15%', left: '8%',  size: 6,  dur: '12s', delay: '0s',   kf: 'float-1' },
+        { top: '30%', left: '15%', size: 4,  dur: '15s', delay: '1s',   kf: 'float-2' },
+        { top: '60%', left: '5%',  size: 5,  dur: '18s', delay: '2s',   kf: 'float-3' },
+        { top: '75%', left: '20%', size: 6,  dur: '14s', delay: '0.5s', kf: 'float-4' },
+        { top: '20%', left: '85%', size: 4,  dur: '16s', delay: '3s',   kf: 'float-5' },
+        { top: '50%', left: '90%', size: 6,  dur: '13s', delay: '1.5s', kf: 'float-1' },
+        { top: '80%', left: '78%', size: 4,  dur: '17s', delay: '2.5s', kf: 'float-2' },
+        { top: '10%', left: '50%', size: 5,  dur: '20s', delay: '4s',   kf: 'float-3' },
+        { top: '40%', left: '60%', size: 7,  dur: '11s', delay: '0.8s', kf: 'float-4' },
+        { top: '65%', left: '45%', size: 4,  dur: '19s', delay: '3.5s', kf: 'float-5' },
+        { top: '85%', left: '35%', size: 5,  dur: '14s', delay: '1.2s', kf: 'float-1' },
+        { top: '25%', left: '72%', size: 6,  dur: '16s', delay: '2.8s', kf: 'float-2' },
+        { top: '55%', left: '28%', size: 4,  dur: '13s', delay: '0.3s', kf: 'float-3' },
+        { top: '90%', left: '60%', size: 5,  dur: '18s', delay: '4.5s', kf: 'float-4' },
+        { top: '35%', left: '3%',  size: 7,  dur: '15s', delay: '1.8s', kf: 'float-5' },
       ].map((p, i) => (
         <div key={i} style={{
           position: 'absolute',
@@ -96,12 +96,10 @@ export default function HeroSection() {
           height: `${p.size}px`,
           borderRadius: '50%',
           backgroundColor: '#FF6B00',
+          boxShadow: `0 0 ${p.size * 2}px rgba(255,107,0,0.6)`,
           pointerEvents: 'none',
-          // @ts-ignore
-          '--tx': p.tx,
-          '--ty': p.ty,
-          animation: `float-particle ${p.dur} ease-in-out infinite ${p.delay}`,
-        } as React.CSSProperties} />
+          animation: `${p.kf} ${p.dur} ease-in-out infinite ${p.delay}`,
+        }} />
       ))}
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px', width: '100%', position: 'relative', zIndex: 1 }}>
