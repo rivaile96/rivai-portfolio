@@ -125,3 +125,15 @@ a {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ── Global mobile fixes ─────────────────────────── */
+@media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  html, body { overflow-x: hidden; max-width: 100vw; }
+
+  /* Section padding reduction */
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+
+  /* Add bottom padding for pages to avoid content under hamburger menu area */
+  main { padding-bottom: 16px; }
+}

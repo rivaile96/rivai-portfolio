@@ -9,7 +9,7 @@ export default function CTASection() {
       padding: '120px 24px',
       backgroundColor: 'var(--bg-surface)',
       borderTop: '1px solid var(--bg-border)',
-    }}>
+    }} className="cta-section">
       <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
         <FadeIn>
           <div style={{
@@ -95,6 +95,12 @@ export default function CTASection() {
           </div>
         </FadeIn>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .cta-section { padding: 60px 16px !important; }
+        }
+      `}</style>
     </section>
   )
 }

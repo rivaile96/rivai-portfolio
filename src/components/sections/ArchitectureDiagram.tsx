@@ -9,7 +9,7 @@ export default function ArchitectureDiagram() {
       borderBottom: '1px solid var(--bg-border)',
       position: 'relative',
       overflow: 'hidden',
-    }}>
+    }} className="arch-section">
       {/* Background dot grid */}
       <div className="dot-grid" style={{ position: 'absolute', inset: 0, opacity: 0.3 }} />
 
@@ -82,6 +82,13 @@ export default function ArchitectureDiagram() {
           </div>
         </FadeIn>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .arch-section { padding: 60px 16px !important; }
+          .arch-diagram-box { padding: 24px 16px !important; }
+        }
+      `}</style>
     </section>
   )
 }

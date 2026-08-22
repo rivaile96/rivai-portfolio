@@ -97,6 +97,12 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .footer-bottom { flex-direction: column !important; text-align: center !important; }
+        }
+      `}</style>
     </footer>
   )
 }

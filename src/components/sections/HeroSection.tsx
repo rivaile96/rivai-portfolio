@@ -106,7 +106,7 @@ export default function HeroSection() {
         <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '80px', alignItems: 'center' }} className="hero-grid">
 
           {/* Left: Content */}
-          <div>
+          <div className="hero-content">
             {/* Profile photo */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -279,6 +279,7 @@ export default function HeroSection() {
         @media (max-width: 768px) {
           .hero-grid { grid-template-columns: 1fr !important; }
           .hero-graph { display: none !important; }
+          .hero-content { padding: 40px 20px !important; }
         }
       `}</style>
     </section>

@@ -53,7 +53,7 @@ export default function FeaturedProjects() {
   const [main, ...rest] = projects
 
   return (
-    <section style={{ padding: '120px 24px', backgroundColor: 'var(--bg-void)' }}>
+    <section style={{ padding: '120px 24px', backgroundColor: 'var(--bg-void)' }} className="projects-section">
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Header */}
         <FadeIn>
@@ -85,7 +85,7 @@ export default function FeaturedProjects() {
           {main && (
             <FadeIn delay={0.1} style={{ gridRow: '1 / 3' }}>
               <Link href={`/projects/${main.slug}`} style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
-                <HoverCard style={cardBase} hoverStyle={cardHover}>
+                <HoverCard style={cardBase} hoverStyle={cardHover} className="project-card-main">
                   {/* Status + tags row */}
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '32px' }}>
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -180,6 +180,8 @@ export default function FeaturedProjects() {
       <style>{`
         @media (max-width: 768px) {
           .projects-grid { grid-template-columns: 1fr !important; grid-template-rows: auto !important; }
+          .project-card-main { padding: 24px !important; }
+          .projects-section { padding: 60px 16px !important; }
         }
       `}</style>
     </section>

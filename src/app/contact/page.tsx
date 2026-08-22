@@ -31,7 +31,7 @@ export default function ContactPage() {
 
   return (
     <div style={{ minHeight: '100dvh', backgroundColor: 'var(--bg-void)', paddingTop: '64px' }}>
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '80px 24px 120px' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '80px 24px 120px' }} className="contact-page">
 
         {/* Header */}
         <FadeIn>
@@ -208,6 +208,7 @@ export default function ContactPage() {
 
       <style>{`
         @media (max-width: 768px) {
+          .contact-page { padding: 40px 16px 80px !important; }
           .contact-grid { grid-template-columns: 1fr !important; }
           .form-row { grid-template-columns: 1fr !important; }
         }

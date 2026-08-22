@@ -78,6 +78,12 @@ export default function ImpactNumbers() {
           .impact-item:nth-child(2) { border-right: none !important; }
           .impact-item:nth-child(3) { border-bottom: none !important; }
         }
+        @media (max-width: 480px) {
+          .impact-grid { grid-template-columns: repeat(2, 1fr) !important; }
+          .impact-item { padding: 20px 12px !important; }
+          .impact-item.has-border { border-right: 1px solid var(--bg-border); border-bottom: 1px solid var(--bg-border); }
+          .impact-item:nth-child(2n) { border-right: none !important; }
+        }
       `}</style>
     </section>
   )

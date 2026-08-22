@@ -40,7 +40,7 @@ const cardHover: React.CSSProperties = {
 export default function ProjectsPage() {
   return (
     <div style={{ minHeight: '100dvh', backgroundColor: 'var(--bg-void)', paddingTop: '64px' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px' }} className="projects-page">
 
         {/* Header */}
         <FadeIn>
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
         <StaggerChildren style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           {projects.map((project) => (
             <StaggerItem key={project.slug}>
-              <Link href={`/projects/${project.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+              <Link href={`/projects/${project.slug}`} style={{ textDecoration: 'none' }} className="project-list-card-wrap">
                 <HoverCard style={cardBase} hoverStyle={cardHover}>
                   <div>
                     {/* Status + meta row */}
@@ -101,13 +101,20 @@ export default function ProjectsPage() {
                     </div>
                   </div>
 
-                  <ArrowRight size={20} color="var(--text-muted)" />
+                  <span className="project-arrow"><ArrowRight size={20} color="var(--text-muted)" /></span>
                 </HoverCard>
               </Link>
             </StaggerItem>
           ))}
         </StaggerChildren>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .projects-page { padding: 40px 16px !important; }
+          .project-list-card-wrap .project-arrow { display: none; }
+        }
+      `}</style>
     </div>
   )
 }

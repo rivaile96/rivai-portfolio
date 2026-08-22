@@ -58,7 +58,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
   return (
     <div style={{ minHeight: '100dvh', backgroundColor: 'var(--bg-void)', paddingTop: '64px' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '64px 24px 120px' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '64px 24px 120px' }} className="project-detail-page">
 
         {/* Back */}
         <FadeIn>
@@ -186,13 +186,20 @@ export default async function ProjectDetailPage({ params }: Props) {
                   <p style={{ fontFamily: 'var(--font-display)', fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '4px' }}>{next.title}</p>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--text-muted)' }}>{next.subtitle}</p>
                 </div>
-                <ArrowRight size={20} color="var(--text-muted)" />
+                <span className="project-next-arrow"><ArrowRight size={20} color="var(--text-muted)" /></span>
               </HoverCard>
             </Link>
           </div>
         </FadeIn>
 
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .project-detail-page { padding: 40px 16px 80px !important; }
+          .project-next-arrow { display: none; }
+        }
+      `}</style>
     </div>
   )
 }

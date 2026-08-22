@@ -9,7 +9,7 @@ const tierDot: Record<string, string> = {
 
 export default function TechStackSection() {
   return (
-    <section style={{ padding: '120px 24px', backgroundColor: 'var(--bg-void)' }}>
+    <section style={{ padding: '120px 24px', backgroundColor: 'var(--bg-void)' }} className="tech-section">
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <FadeIn>
           <div style={{ marginBottom: '64px' }}>
@@ -84,6 +84,12 @@ export default function TechStackSection() {
           })}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .tech-section { padding: 60px 16px !important; }
+        }
+      `}</style>
     </section>
   )
 }

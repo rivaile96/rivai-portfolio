@@ -38,7 +38,7 @@ const certifications = [
 export default function AboutPage() {
   return (
     <div style={{ minHeight: '100dvh', backgroundColor: 'var(--bg-void)', paddingTop: '64px' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '80px 24px 120px' }}>
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '80px 24px 120px' }} className="about-page">
 
         {/* Header */}
         <FadeIn>
@@ -158,8 +158,9 @@ export default function AboutPage() {
       </div>
 
       <style>{`
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
           .timeline-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+          .about-page { padding: 40px 16px 80px !important; }
         }
       `}</style>
     </div>

@@ -44,7 +44,7 @@ export default function Navbar() {
                 fontFamily: 'var(--font-mono)', fontSize: '13px', fontWeight: 700,
                 color: '#ffffff',
               }}>RI</div>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-primary)' }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '180px' }}>
                 Riva Imanudin
               </span>
             </div>
@@ -148,7 +148,7 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-menu-btn { display: block !important; }
-          .mobile-menu { display: flex !important; }
+          .mobile-menu { display: flex !important; padding-bottom: env(safe-area-inset-bottom, 16px) !important; }
         }
       `}</style>
     </header>

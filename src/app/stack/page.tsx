@@ -17,7 +17,7 @@ const tierConfig = {
 export default function StackPage() {
   return (
     <div style={{ minHeight: '100dvh', backgroundColor: 'var(--bg-void)', paddingTop: '64px' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px 120px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '80px 24px 120px' }} className="stack-page">
 
         {/* Header */}
         <FadeIn>
@@ -91,6 +91,12 @@ export default function StackPage() {
           )
         })}
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .stack-page { padding: 40px 16px 80px !important; }
+        }
+      `}</style>
     </div>
   )
 }
